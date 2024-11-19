@@ -65,6 +65,7 @@ module "azurerm_key_vault_key" {
   rotation_policy = {
     automatic = {
       time_before_expiry = var.rotation_policy_automatic_time_before_expiry
+      time_after_creation = var.rotation_policy_automatic_time_after_creation
     }
     expire_after         = var.rotation_policy_expire_after
     notify_before_expiry = var.rotation_policy_notify_before_expiry
